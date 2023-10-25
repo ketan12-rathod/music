@@ -1,0 +1,96 @@
+{% extends 'company/common/layout.html' %}
+
+{% block content %}
+<div class="bradcam_area breadcam_bg_2">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="bradcam_text text-center">
+                    <h3>All Songs</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="whole-wrap">
+    <div class="container box_1170">
+        <div class="section-top-border">
+            <h3 class="mb-30">All Songs</h3>
+            <div class="progress-table-wrap">
+                <div class="progress-table">
+                    <div class="table-head">
+                        <div class="serial">Song Title</div>
+                        <div class="visit" style="padding-left: 20px;">Singer Name</div>
+                        <div class="visit">Musician</div>
+                        <div class="percentage">Video</div>
+                        <div class="serial">Delete</div>
+
+                    </div>
+                    {% for row in result %}
+                    <div class="table-row">
+                        <div class="serial">{{row.s_title}}</div>
+                        <div class="visit" style="padding-left: 20px;"> {{row.s_name}}</div>
+                        <div class="visit">{{row.m_name}}</div>
+                        <!-- ----- if see image of video---- -->
+                        <!-- <div class="thumb" aria-colspan="2">
+                            <img src="/media/upload/{{row.img}}" style="margin-top: 35px;" height="50" width="50"
+                                alt="">
+                        </div> -->
+
+                        <!-- Add id attribute to the video element -->
+                        <video id="video{{ row.id }}" width="300" height="360" controls loop>
+                            <source src="/media/upload/{{ row.mp4 }}" type="video/mp4">
+                        </video>
+
+                        <div class="serial"><a href="/company/delete_video/{{row.id}}"
+                                style="margin-left: 100px;">delete</a></div>
+
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const videos = document.querySelectorAll("video");
+        let currentlyPlayingVideoId = null;
+
+        videos.forEach(video => {
+            const videoId = video.id;
+            const playbackPosition = localStorage.getItem(videoId);
+
+            if (playbackPosition) {
+                video.currentTime = parseFloat(playbackPosition);
+                video.play();
+            }
+
+            // Save playback position when the video is paused or ended
+            video.addEventListener("pause", function () {
+                localStorage.setItem(videoId, video.currentTime.toString());
+            });
+
+            video.addEventListener("ended", function () {
+                localStorage.removeItem(videoId);
+            });
+
+            // Pause other videos when this video is played
+            video.addEventListener("play", function () {
+                if (currentlyPlayingVideoId && currentlyPlayingVideoId !== videoId) {
+                    const previousVideo = document.getElementById(currentlyPlayingVideoId);
+                    if (previousVideo && !previousVideo.paused) {
+                        previousVideo.pause();
+                    }
+                }
+                currentlyPlayingVideoId = videoId;
+            });
+        });
+    });
+</script>
+
+
+
+{% endblock %}

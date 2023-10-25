@@ -1,0 +1,62 @@
+{% extends 'company/common/layout.html' %}
+
+{% block content %}
+
+<div class="bradcam_area breadcam_bg_2">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="bradcam_text text-center">
+                    <h3>LOGIN</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<center>
+    {% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+</center>
+<div class="whole-wrap">
+    <div class="container box_1170">
+
+        <div class="section-top-border">
+            <div class="row">
+                <div class="col-lg-8 col-md-8">
+                    <h3 class="mb-30">LOGIN FORM</h3>
+                    <form action="/company/login_check" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        
+                        <div class="mt-10">
+                            <input type="text" name="user_name" id="user_name" placeholder="User Name" onfocus="this.placeholder = ''"
+                                onblur="this.placeholder = 'User Name'" required class="single-input">
+                        </div>
+                        <div class="mt-10">
+                            <input type="password" id="password" name="password" placeholder="Password"
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'" required
+                                class="single-input">
+                        </div>
+                        
+                        
+                        <!-- For Gradient Border Use -->
+                        <div class="button-group-area mt-10">
+                            <button type="submit" class="genric-btn primary-border e-large">Login</button>
+                        </div>
+                        <p>if you have not account</p>
+                        <div class="button-group-area mt-10">
+                            <button type="submit" class="genric-btn primary-border e-large"><a href="/company/register">sign in</a></button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

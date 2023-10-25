@@ -1,0 +1,77 @@
+{% extends 'company/common/layout.html' %}
+{% load static %}
+{% block content %}
+
+<div class="bradcam_area breadcam_bg_2">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="bradcam_text text-center">
+                    <h3>Add Song</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<img src="{% static 'company/img/song_logo.png' %}" style="float:right; position: absolute; padding-left:950px; "
+    alt="">
+<div class="whole-wrap" style="position: relative;">
+    <div class="container box_1170">
+
+        <div class="section-top-border">
+            <div class="row">
+                <div class="col-lg-8 col-md-8">
+                    <h3 class="mb-30">Add Song</h3>
+                    <form action="/company/store_song" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="mt-10">
+                            <input type="text" name="song" id="song" placeholder="Song Title"
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Song Title'" required
+                                class="single-input">
+                        </div>
+                        <div class="mt-10">
+                            <input type="text" name="singer_name" id="singer_name" placeholder="Singer Name"
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Singer Name'" required
+                                class="single-input">
+                        </div>
+                        <div class="mt-10">
+                            <input type="text" name="musician" placeholder="Musician Name"
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Musician Name'" required
+                                class="single-input">
+                        </div>
+                        <div class="mt-10">
+
+                            <label for="mp3File">Upload MP3 File:</label>
+                            <input type="file" class="single-input" id="mp3File" name="mp3File" accept=".mp3" required>
+                        </div>
+                        <div class="mt-10">
+                            <label for="mp3File">Title Image:</label>
+                            <input type="file" class="single-input" id="img" name="img">
+                        </div>
+                        <div class="button-group-area mt-10">
+                            <button type="submit" class="genric-btn primary-border e-large">Add Song</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <script>
+    function addLine() {
+        var lyricsInput = document.getElementById("lyrics");
+        var lyricsText = lyricsInput.value;
+        
+        if (lyricsText.trim() !== "") {
+            var displayDiv = document.getElementById("displayLyrics");
+            var lineDiv = document.createElement("div");
+            lineDiv.textContent = lyricsText;
+            displayDiv.appendChild(lineDiv);
+            
+            // Clear the input field after adding the line
+            lyricsInput.value = "";
+        }
+    }
+</script> -->
+{% endblock %}

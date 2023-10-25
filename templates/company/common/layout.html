@@ -1,0 +1,96 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Musico</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{% static 'company/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'company/css/owl.carousel.min.css'%}">
+    <link rel="stylesheet" href="{% static 'company/css/magnific-popup.css'%}">
+    <link rel="stylesheet" href="{% static 'company/css/font-awesome.min.css'%}">
+    <link rel="stylesheet" href="{% static 'company/css/themify-icons.css'%}">
+    <link rel="stylesheet" href="{% static 'company/css/nice-select.css'%}">
+    <link rel="stylesheet" href="{% static 'company/css/audioplayer.css'%}">
+    <link rel="stylesheet" href="{% static 'company/css/flaticon.css'%}">
+    <link rel="stylesheet" href="{% static 'company/css/gijgo.css'%}">
+    <link rel="stylesheet" href="{% static 'company/css/animate.css'%}">
+    <link rel="stylesheet" href="{% static 'company/css/slick.css'%}">
+    <link rel="stylesheet" href="{% static 'company/css/slicknav.css'%}">
+    <link rel="stylesheet" href="{% static 'company/css/style.css'%}">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    {% include 'company/common/header.html' %}
+    <!-- header-end -->
+
+    <!-- slider_area_start -->
+   {% block content %}
+   {% endblock %}
+    <!--/ contact_rsvp -->
+
+    <!-- footer start -->
+    {% include 'company/common/footer.html' %}
+    <!--/ footer end  -->
+
+    <!-- link that opens popup -->
+
+    <!-- JS here -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+            crossorigin="anonymous">
+    </script>
+    <script src="{% static 'company/js/vendor/modernizr-3.5.0.min.js'%}"></script>
+    <script src="{% static 'company/js/vendor/jquery-1.12.4.min.js'%}"></script>
+    <script src="{% static 'company/js/popper.min.js'%}"></script>
+    <script src="{% static 'company/js/bootstrap.min.js'%}"></script>
+    <script src="{% static 'company/js/owl.carousel.min.js'%}"></script>
+    <script src="{% static 'company/js/isotope.pkgd.min.js'%}"></script>
+    <script src="{% static 'company/js/ajax-form.js'%}"></script>
+    <script src="{% static 'company/js/waypoints.min.js'%}"></script>
+    <script src="{% static 'company/js/jquery.counterup.min.js'%}"></script>
+    <script src="{% static 'company/js/imagesloaded.pkgd.min.js'%}"></script>
+    <script src="{% static 'company/js/audioplayer.js'%}"></script>
+    <script src="{% static 'company/js/scrollIt.js'%}"></script>
+    <script src="{% static 'company/js/jquery.scrollUp.min.js'%}"></script>
+    <script src="{% static 'company/js/wow.min.js'%}"></script>
+    <script src="{% static 'company/js/nice-select.min.js'%}"></script>
+    <script src="{% static 'company/js/jquery.slicknav.min.js'%}"></script>
+    <script src="{% static 'company/js/jquery.magnific-popup.min.js'%}"></script>
+    <script src="{% static 'company/js/plugins.js'%}"></script>
+    <script src="{% static 'company/js/gijgo.min.js'%}"></script>
+    <script src="{% static 'company/js/slick.min.js'%}"></script>
+    <!--contact js-->
+    <script src="{% static 'company/js/contact.js'%}"></script>
+    <script src="{% static 'company/js/jquery.ajaxchimp.min.js'%}"></script>
+    <script src="{% static 'company/js/jquery.form.js'%}"></script>
+    <script src="{% static 'company/js/jquery.validate.min.js'%}"></script>
+    <script src="{% static 'company/js/mail-script.js'%}"></script>
+
+    <script src="{% static 'company/js/main.js'%}"></script>
+    
+		<script>
+                $(function() {
+                    $('audio').audioPlayer({
+
+                    });
+                });
+            </script>
+</body>
+
+</html>
