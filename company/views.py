@@ -12,7 +12,7 @@ def layout(request):
 
 def index(request):
     id=request.user.id
-    result=Register.objects.get(user_id=id)
+    result=User.objects.get(pk=id)
     context={'result':result}
     return render(request,'company/index.html',context)
 
