@@ -19,13 +19,13 @@ from django.urls import path,include
 from user import views
 
 urlpatterns = [
-    # path('index', views.index, name='index'),
-    # path('layout', views.layout, name='layout'),
+    path('index', views.index, name='index'),
+    path('layout', views.layout, name='layout'),
     # # path('contact', views.contact, name='contact'),
     # # path('store_contact', views.store_contact, name='store_contact'),
     # path('common_table', views.common_table, name='common_table'),
-    # path('register', views.register, name='register'),
-    # path('register_store', views.register_store, name='register_store'),
+    path('register', views.register, name='register'),
+    path('register_store', views.register_store, name='register_store'),
     # path('login', views.login, name='login'),
     # path('login_check', views.login_check, name='login_check'),
     # path('profile', views.profile, name='profile'),

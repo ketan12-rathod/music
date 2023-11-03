@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>My Albums a Entertainment Category  Flat Bootstarp Resposive Website Template | Home :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="My Albums Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="{% static 'user/css/bootstrap.css'%}" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<link href="{% static 'user/css/style.css'%}" rel='stylesheet' type='text/css' />	
+<script src="{% static 'user/js/jquery-1.11.1.min.js'%}"></script>
+<script src="{% static 'user/js/simpleCart.min.js'%}"> </script>	
+<!--web-fonts-->
+ <link href='http://fonts.googleapis.com/css?family=Jockey+One|Open+Sans:300italic,400italic,600italic,400,600,700' rel='stylesheet' type='text/css'>
+ <link href='http://fonts.googleapis.com/css?family=Audiowide|Open+Sans:300italic,400italic,600italic,700,300,600,400' rel='stylesheet' type='text/css'>
+<!--//web-fonts-->
+<style> 
+    /* CSS styles */
+    .textbox.common-input{
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        height: 51px;
+    }
+
+    .textbox.common-input:focus{
+        outline: none;
+        
+    /* Change border color on focus */
+    }
+
+</style>
+</head>
+<body>
+	<!--start-header-->
+	  {% include 'user/common/header.html' %}
+		  <!--banner-slider-->
+		     {% block content %}
+
+             {% endblock %}
+	<!--//music-->
+	 <!--footer-->
+	{% include 'user/common/footer.html' %}
+	<!--start-smoth-scrolling-->
+			<script type="text/javascript">
+								jQuery(document).ready(function($) {
+									$(".scroll").click(function(event){		
+										event.preventDefault();
+										$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+									});
+								});
+								</script>
+							<!--start-smoth-scrolling-->
+						<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+								</script>
+		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+</body>
+</html>

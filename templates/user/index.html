@@ -1,0 +1,166 @@
+{% extends 'user/common/layout.html' %}
+{% load static %}
+{% block content %}
+
+<div class="banner">
+    <div id="top" class="callbacks_container">
+        <ul class="rslides" id="slider">
+            <li>
+                <img src="{% static 'user/images/3.jpg'%}" class="img-responsive" alt="" />
+            </li>
+            <li>
+                <img src="{% static 'user/images/2.jpg'%}" class="img-responsive" alt="" />
+            </li>
+            <li>
+                <img src="{% static 'user/images/1.jpg'%}" class="img-responsive" alt="" />
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="{% static 'user/js/responsiveslides.min.js'%}"></script>
+<script>
+    // You can also use "$(window).load(function() {"
+    $(function () {
+        // Slideshow 3
+        $("#slider").responsiveSlides({
+            auto: true,
+            pager: true,
+            nav: false,
+            speed: 500,
+            namespace: "callbacks",
+            before: function () {
+                $('.events').append("<li>before event fired.</li>");
+            },
+            after: function () {
+                $('.events').append("<li>after event fired.</li>");
+            }
+        });
+
+    });
+</script>
+<!--//end-banner-->
+
+<!--start-albums-->
+<div class="clearfix"></div>
+<div class="albums">
+    <div class="container">
+        <div class="album-info">
+            <div class="col-md-3 album">
+                <div class="album-box">
+                    <h4>Music</h4>
+                    <h5>For all Ages</h5>
+                </div>
+            </div>
+            <div class="col-md-3 album">
+                <div class="album-box">
+                    <h4>ALBUMS</h4>
+                    <h5>For all Ages</h5>
+                </div>
+            </div>
+            <div class="col-md-3 album">
+                <div class="album-box">
+                    <h4>SONGS</h4>
+                    <h5>For all Ages</h5>
+                </div>
+            </div>
+            <div class="col-md-3 album lost">
+                <div class="album-box">
+                    <h4>VIDEOS</h4>
+                    <h5>For all Ages</h5>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="music-info">
+            <div class="col-md-4 music-grids">
+                <figure class="effect-bubba">
+                    <img src="{% static 'user/images/m1.jpg'%}" alt="" />
+                    <figcaption>
+                        <h4>MUSIC ALBUM</h4>
+                        <p>In sit amet sapien eros Integer in tincidunt labore et dolore magna aliqua</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-md-4 music-grids">
+                <figure class="effect-bubba">
+                    <img src="{% static 'user/images/m2.jpg'%}" alt="" />
+                    <figcaption>
+                        <h4>MUSIC ALBUM</h4>
+                        <p>In sit amet sapien eros Integer in tincidunt labore et dolore magna aliqua</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-md-4 music-grids">
+                <figure class="effect-bubba">
+                    <img src="{% static 'user/images/m3.jpg'%}" alt="" />
+                    <figcaption>
+                        <h4>MUSIC ALBUM</h4>
+                        <p>In sit amet sapien eros Integer in tincidunt labore et dolore magna aliqua</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="music-info two">
+            <div class="col-md-4 music-grids">
+                <figure class="effect-bubba">
+                    <img src="{% static 'user/images/m4.jpg'%}" alt="" />
+                    <figcaption>
+                        <h4>MUSIC ALBUM</h4>
+                        <p>In sit amet sapien eros Integer in tincidunt labore et dolore magna aliqua</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-md-4 music-grids">
+                <figure class="effect-bubba">
+                    <img src="{% static 'user/images/m6.jpg'%}" alt="" />
+                    <figcaption>
+                        <h4>MUSIC ALBUM</h4>
+                        <p>In sit amet sapien eros Integer in tincidunt labore et dolore magna aliqua</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-md-4 music-grids">
+                <figure class="effect-bubba">
+                    <img src="{% static 'user/images/m5.jpg'%}" alt="" />
+                    <figcaption>
+                        <h4>MUSIC ALBUM</h4>
+                        <p>In sit amet sapien eros Integer in tincidunt labore et dolore magna aliqua</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="music-info two">
+            <div class="col-md-4 music-grids">
+                <figure class="effect-bubba">
+                    <img src="{% static 'user/images/m1.jpg'%}" alt="" />
+                    <figcaption>
+                        <h4>MUSIC ALBUM</h4>
+                        <p>In sit amet sapien eros Integer in tincidunt labore et dolore magna aliqua</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-md-4 music-grids">
+                <figure class="effect-bubba">
+                    <img src="{% static 'user/images/m2.jpg'%}" alt="" />
+                    <figcaption>
+                        <h4>MUSIC ALBUM</h4>
+                        <p>In sit amet sapien eros Integer in tincidunt labore et dolore magna aliqua</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-md-4 music-grids">
+                <figure class="effect-bubba">
+                    <img src="{% static 'user/images/m3.jpg'%}" alt="" />
+                    <figcaption>
+                        <h4>MUSIC ALBUM</h4>
+                        <p>In sit amet sapien eros Integer in tincidunt labore et dolore magna aliqua</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}

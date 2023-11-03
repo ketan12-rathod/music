@@ -1,0 +1,66 @@
+{% load static %}
+<div class="header" id="home">
+    <div class="header-top">
+          <div class="container">
+              <div class="logo">
+                  <a href="index.html"><h1>MyMusic</h1></a>
+              </div>
+              <div class="header-right">
+                  <div class="cart box_1">
+                      <!-- <a href="checkout.html">
+                          <h3> <span class="simpleCart_total"> $0.00 </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span> items)<img src="{% static 'user/images/cart.png'%}" alt=""></h3>
+                      </a>	 -->
+                      <!-- <p><a href="javascript:;" class="simpleCart_empty">Empty card</a></p> -->
+                      <div class="clearfix"> </div>
+                  </div>
+              </div>
+               <div class="clearfix"> </div>
+          </div>
+        </div>
+            <!--start-nav-->
+      <div class="top-nav">
+            <div class="container">
+              <div class="home"><a href="index.html"><i class="glyphicon glyphicon-home"> </i></a></div>
+              <span class="menu"> </span>
+              <div class="top-menu">
+                  <nav class="navigation">
+                      <ul class="cl-effect-16">
+                          <li><a class="active" href="index.html">Home</a></li>
+                          <li><a href="favorites.html">Favorites</a></li>
+                          <li><a href="artists.html">Artists</a></li>
+                          <li><a href="typography.html">specials</a></li>
+                          <li><a href="albums.html">Recent Albums</a></li>
+                          <li><a href="contact.html">contact</a></li>
+                             <div class="clearfix"> </div>
+                      <ul>
+                      <!-- script-menu -->
+                      <script>
+                      $( "span.menu" ).click(function() {
+                        $( ".top-menu" ).slideToggle( "slow", function() {
+                          // Animation complete.
+                        });
+                      });
+                  </script>
+                  <!-- script-menu -->
+                  </nav>		
+              </div>
+              <div id="sb-search" class="sb-search">
+                          <form>
+                              <input class="sb-search-input" placeholder="Search" type="search" name="search" id="search">
+                              <input class="sb-search-submit" type="submit" value="">
+                              <span class="sb-icon-search"> </span>
+                          </form>
+              </div>
+        <!-- search-scripts -->
+              <script src="{% static 'user/js/classie.js'%}"></script>
+              <script src="{% static 'user/js/uisearch.js'%}"></script>
+                  <script>
+                      new UISearch( document.getElementById( 'sb-search' ) );
+                  </script>
+              <!-- //search-scripts -->
+
+              <div class="clearfix"> </div>
+
+          </div>
+      </div>
+  </div>
