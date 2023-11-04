@@ -19,7 +19,10 @@ from django.urls import path,include
 from myadmin import views
 
 urlpatterns = [
-    # path('index', views.index, name='index'),
-    # path('layout', views.layout, name='layout'),
+    path('index', views.index, name='index'),
+    path('layout', views.layout, name='layout'),
+    path('common_form', views.common_form, name='common_form'),
+    path('add_country', views.add_country, name='add_country'),
+    path('store_country', views.store_country, name='store_country'),
     
 ]

@@ -1,85 +1,140 @@
 {% load static %}
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-   <head>
-      <!-- basic -->
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <!-- mobile metas -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-      <!-- site metas -->
-      <title>Pluto - Responsive Bootstrap Admin Panel Templates</title>
-      <meta name="keywords" content="">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <!-- site icon -->
-      <link rel="icon" href="{% static 'myadmin/images/fevicon.png'%}" type="image/png" />
-      <!-- bootstrap css -->
-      <link rel="stylesheet" href="{% static 'myadmin/css/bootstrap.min.css'%}" />
-      <!-- site css -->
-      <link rel="stylesheet" href="{% static 'myadmin/style.css'%}" />
-      <!-- responsive css -->
-      <link rel="stylesheet" href="{% static 'myadmin/css/responsive.css'%}" />
-      <!-- color css -->
-      <link rel="stylesheet" href="{% static 'myadmin/css/colors.css'%}" />
-      <!-- select bootstrap -->
-      <link rel="stylesheet" href="{% static 'myadmin/css/bootstrap-select.css'%}" />
-      <!-- scrollbar css -->
-      <link rel="stylesheet" href="{% static 'myadmin/css/perfect-scrollbar.css'%}" />
-      <!-- custom css -->
-      <link rel="stylesheet" href="{% static 'myadmin/css/custom.css'%}" />
-      <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-      <![endif]-->
-   </head>
-   <body class="dashboard dashboard_1">
-      <div class="full_container">
-         <div class="inner_container">
-            <!-- Sidebar  -->
-            {% include 'myadmin/common/sidebar.html' %}
-            <!-- end sidebar -->
-            <!-- right content -->
-            <div id="content">
-               <!-- topbar -->
-               {% include 'myadmin/common/header.html' %}
-               <!-- end topbar -->
-               <!-- dashboard inner -->
-               <div class="midde_cont">
-                  {% block content %}
 
-                  {% endblock %}
-                  <!-- footer -->
-                  {% include 'myadmin/common/footer.html' %}
-               </div>
-               <!-- end dashboard inner -->
-            </div>
+<!-- Mirrored from templates.iqonic.design/muzik/html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Nov 2023 08:15:03 GMT -->
+<head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <title>Muzik by Ketan</title>
+   <!-- Favicon -->
+   <link rel="shortcut icon" href="{% static 'user/images/favicon.ico'%}" />
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="{% static 'user/css/bootstrap.min.css'%}">
+   <!-- Typography CSS -->
+   <link rel="stylesheet" href="{% static 'user/css/typography.css'%}">
+   <!-- Style CSS -->
+   <link rel="stylesheet" href="{% static 'user/css/style.css'%}">
+   <!-- Responsive CSS -->
+   <link rel="stylesheet" href="{% static 'user/css/responsive.css'%}">
+</head>
+<body>
+   <!-- loader Start -->
+   <div id="loading">
+      <div id="loading-center">
+      </div>
+   </div>
+   <!-- loader END -->
+   <!-- Wrapper Start -->
+   <div class="wrapper">
+      <!-- Sidebar  -->
+      {% include 'myadmin/common/sidebar.html' %}
+      <!-- TOP Nav Bar -->
+      {% include 'myadmin/common/header.html' %}
+      <!-- TOP Nav Bar END -->
+      <!-- Page Content  -->
+      {% block content %}
+
+	  {% endblock %}
+   </div>
+   <!-- Wrapper END -->
+   <!-- Footer -->
+   {% include 'myadmin/common/footer.html' %}
+   <!-- Footer END -->
+   <!-- color-customizer -->
+   <div class="iq-colorbox color-fix">
+      <div class="buy-button"> <a class="color-full" href="#"><i class="fa fa-spinner fa-spin"></i></a> </div>
+      <div id="right-sidebar-scrollbar" class="iq-colorbox-inner">
+         <div class="clearfix color-picker">
+            <h3 class="iq-font-black">music Awesome Color</h3>
+            <p>This color combo available inside whole template. You can change on your wish, Even you can create your own with limitless possibilities! </p>
+            <ul class="iq-colorselect clearfix">
+               <li class="color-1 iq-colormark" data-style="color-1"></li>
+               <li class="color-2" data-style="iq-color-2"></li>
+               <li class="color-3" data-style="iq-color-3"></li>
+               <li class="color-4" data-style="iq-color-4"></li>
+               <li class="color-5" data-style="iq-color-5"></li>
+               <li class="color-6" data-style="iq-color-6"></li>
+               <li class="color-7" data-style="iq-color-7"></li>
+               <li class="color-8" data-style="iq-color-8"></li>
+               <li class="color-9" data-style="iq-color-9"></li>
+               <li class="color-10" data-style="iq-color-10"></li>
+               <li class="color-11" data-style="iq-color-11"></li>
+               <li class="color-12" data-style="iq-color-12"></li>
+               <li class="color-13" data-style="iq-color-13"></li>
+               <li class="color-14" data-style="iq-color-14"></li>
+               <li class="color-15" data-style="iq-color-15"></li>
+               <li class="color-16" data-style="iq-color-16"></li>
+               <li class="color-17" data-style="iq-color-17"></li>
+               <li class="color-18" data-style="iq-color-18"></li>
+               <li class="color-19" data-style="iq-color-19"></li>
+               <li class="color-20" data-style="iq-color-20"></li>
+            </ul>
+            <a target="_blank" class="btn btn-primary d-block mt-3" href="https://themeforest.net/item/muzik-music-streaming-admin-template/27967164">Purchase Now</a>
          </div>
       </div>
-      <!-- jQuery -->
-      <script src="{% static 'myadmin/js/jquery.min.js'%}"></script>
-      <script src="{% static 'myadmin/js/popper.min.js'%}"></script>
-      <script src="{% static 'myadmin/js/bootstrap.min.js'%}"></script>
-      <!-- wow animation -->
-      <script src="{% static 'myadmin/js/animate.js'%}"></script>
-      <!-- select country -->
-      <script src="{% static 'myadmin/js/bootstrap-select.js'%}"></script>
-      <!-- owl carousel -->
-      <script src="{% static 'myadmin/js/owl.carousel.js'%}"></script> 
-      <!-- chart js -->
-      <script src="{% static 'myadmin/js/Chart.min.js'%}"></script>
-      <script src="{% static 'myadmin/js/Chart.bundle.min.js'%}"></script>
-      <script src="{% static 'myadmin/js/utils.js'%}"></script>
-      <script src="{% static 'myadmin/js/analyser.js'%}"></script>
-      <!-- nice scrollbar -->
-      <script src="{% static 'myadmin/js/perfect-scrollbar.min.js'%}"></script>
-      <script>
-         var ps = new PerfectScrollbar('#sidebar');
-      </script>
-      <!-- custom js -->
-      <script src="{% static 'myadmin/js/custom.js'%}"></script>
-      <script src="{% static 'myadmin/js/chart_custom_style1.js'%}"></script>
-   </body>
+   </div>
+   <!-- color-customizer END -->
+   <!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="{% static 'user/js/jquery.min.js'%}"></script>
+   <script src="{% static 'user/js/popper.min.js'%}"></script>
+   <script src="{% static 'user/js/bootstrap.min.js'%}"></script>
+   <!-- Appear JavaScript -->
+   <script src="{% static 'user/js/jquery.appear.js'%}"></script>
+   <!-- Countdown JavaScript -->
+   <script src="{% static 'user/js/countdown.min.js'%}"></script>
+   <!-- Counterup JavaScript -->
+   <script src="{% static 'user/js/waypoints.min.js'%}"></script>
+   <script src="{% static 'user/js/jquery.counterup.min.js'%}"></script>
+   <!-- Wow JavaScript -->
+   <script src="{% static 'user/js/wow.min.js'%}"></script>
+   <!-- Apexcharts JavaScript -->
+   <script src="{% static 'user/js/apexcharts.js'%}"></script>
+   <!-- Slick JavaScript -->
+   <script src="{% static 'user/js/slick.min.js'%}"></script>
+   <!-- Select2 JavaScript -->
+   <script src="{% static 'user/js/select2.min.js'%}"></script>
+   <!-- Owl Carousel JavaScript -->
+   <script src="{% static 'user/js/owl.carousel.min.js'%}"></script>
+   <!-- Magnific Popup JavaScript -->
+   <script src="{% static 'user/js/jquery.magnific-popup.min.js'%}"></script>
+   <!-- Smooth Scrollbar JavaScript -->
+   <script src="{% static 'user/js/smooth-scrollbar.js'%}"></script>
+   <!-- lottie JavaScript -->
+   <script src="{% static 'user/js/lottie.js'%}"></script>
+   <!-- am core JavaScript -->
+   <script src="{% static 'user/js/core.js'%}"></script>
+   <!-- am charts JavaScript -->
+   <script src="{% static 'user/js/charts.js'%}"></script>
+   <!-- am animated JavaScript -->
+   <script src="{% static 'user/js/animated.js'%}"></script>
+   <!-- am kelly JavaScript -->
+   <script src="{% static 'user/js/kelly.js'%}"></script>
+   <!-- am maps JavaScript -->
+   <script src="{% static 'user/js/maps.js'%}"></script>
+   <!-- am worldLow JavaScript -->
+   <script src="{% static 'user/js/worldLow.js'%}"></script>
+   <!-- Raphael-min JavaScript -->
+   <script src="{% static 'user/js/raphael-min.js'%}"></script>
+   <!-- Morris JavaScript -->
+   <script src="{% static 'user/js/morris.js'%}"></script>
+   <!-- Morris min JavaScript -->
+   <script src="{% static 'user/js/morris.min.js'%}"></script>
+   <!-- Flatpicker Js -->
+   <script src="{% static 'user/js/flatpickr.js'%}"></script>
+   <!-- Style Customizer -->
+   <script src="{% static 'user/js/style-customizer.js'%}"></script>
+   <!-- Chart Custom JavaScript -->
+   <script src="{% static 'user/js/chart-custom.js'%}"></script>
+<!-- Music js -->
+   <script src="{% static 'user/js/music-player.js'%}"></script>
+   <!-- Music-player js -->
+   <script src="{% static 'user/js/music-player-dashboard.js'%}"></script>
+   <!-- Custom JavaScript -->
+   <script src="{% static 'user/js/custom.js'%}"></script>
+</body>
+
+<!-- Mirrored from templates.iqonic.design/muzik/html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Nov 2023 08:16:37 GMT -->
 </html>

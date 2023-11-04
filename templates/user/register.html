@@ -1,64 +1,131 @@
 {% extends 'user/common/layout.html' %}
 
 {% block content %}
-<div class="contact">
-    <div class="container">
-        <h3 class="tittle">Register</h3>
-        <div class="lcontact span_1_of_contact">
-            <div class="contact-form">
-                <form method="post" action="/user/register_store">
-                    {% csrf_token %}
-                    <p class="comment-form-author"><label for="author">Your First Name:</label>
-                        <input type="text" class="textbox" id="fname" name="fname" value="Enter your name here..." onfocus="this.value = '';"
-                            onblur="if (this.value == '') {this.value = 'Enter your name here...';}">
-                    </p>
-                    <p class="comment-form-author"><label for="author">Your Last Name:</label>
-                        <input type="text" class="textbox" id="lname" name="lname" value="Enter your last here..." onfocus="this.value = '';"
-                            onblur="if (this.value == '') {this.value = 'Enter your last here...';}">
-                    </p>
-                    <p class="comment-form-author"><label for="author">Email:</label>
-                        <input type="email" class="textbox common-input" id="email" name="email" style="width: 652px;" value="Enter your email here..." onfocus="this.value = '';"
-                            onblur="if (this.value == '') {this.value = 'Email';}">
-                    </p>
-                   
-                    <p class="comment-form-author"><label for="author">Your User Name:</label>
-                        <input type="text" class="textbox" id="uname" name="uname" value="Enter your user here..." onfocus="this.value = '';"
-                            onblur="if (this.value == '') {this.value = 'Enter your user here...';}">
-                    </p>
-                    <p class="comment-form-author"><label for="author">Address:</label>
-                        <textarea id="addr" name="addr" value="Enter your address here..." onfocus="this.value = '';"
-                            onblur="if (this.value == '') {this.value = 'Message';}">Enter your address here...</textarea>
-                    </p>
-                    <p class="comment-form-author"><label for="author">Password:</label>
-                        <input type="password" id="password" name="password" class="textbox common-input" value="Enter your password here..." onfocus="this.value = '';"
-                            onblur="if (this.value == '') {this.value = 'Enter your password here...';}">
-                    </p>
-                    <p class="comment-form-author"><label for="author">Confirm Password:</label>
-                        <input type="password" id="cpassword" name="cpassword" class="textbox common-input" value="Enter your confirm password here..." onfocus="this.value = '';"
-                            onblur="if (this.value == '') {this.value = 'Enter your confirm password here...';}">
-                    </p>
-                    
-                    <input name="submit" type="submit" id="submit" value="Register">
-                </form>
-            </div>
-        </div>
-        <div class="contact_grid span_2_of_contact_right">
-            <!-- <h3>Address</h3> -->
-            <div class="address">
-                <i class="pin_icon"></i>
-                <div class="contact_address">
-                    Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet cum soluta nobis eleifend
-                    cum soluta nobis eleifend option congue nihil option congue nihil doming id quod mazim placerat
-                    facer possim assum. Typi non
+<div id="content-page" class="content-page">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="iq-card">
+                    <div class="iq-card-header d-flex justify-content-between">
+                        <div class="iq-header-title">
+                            <h4 class="card-title">Register</h4>
+                        </div>
+                    </div>
+                    <div class="iq-card-body">
+                        <form>
+                            <div class="form-group">
+                                <div class="add-img-user profile-img-edit">
+                                    <h4>Profile Pic</h4>
+                                    <div class="p-image">
+                                        <a href="javascript:void();" class="upload-button btn iq-bg-primary">File
+                                            Upload</a>
+                                        <input class="file-upload" type="file" accept="image/*">
+                                    </div>
+                                </div>
+                                <div class="img-extension mt-3">
+                                    <div class="d-inline-block align-items-center">
+                                        <span>Only</span>
+                                        <a href="javascript:void();">.jpg</a>
+                                        <a href="javascript:void();">.png</a>
+                                        <a href="javascript:void();">.jpeg</a>
+                                        <span>allowed</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
                 </div>
-                <div class="clearfix"></div>
             </div>
-        </div>
-        <div class="clearfix"></div>
-        <div class="map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387144.007583421!2d-73.97800349999999!3d40.7056308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sin!4v1413440825630"
-                frameborder="0" style="border:0"></iframe>
+            <div class="col-lg-9">
+                <div class="iq-card">
+                    <div class="iq-card-header d-flex justify-content-between">
+                        <div class="iq-header-title">
+                            <h4 class="card-title">Fill Your Information</h4>
+                        </div>
+                    </div>
+                    <div class="iq-card-body">
+                        <div class="new-user-info">
+                            <form>
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label for="fname">First Name:</label>
+                                        <input type="text" class="form-control" id="fname" placeholder="First Name">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="lname">Last Name:</label>
+                                        <input type="text" class="form-control" id="lname" placeholder="Last Name">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="add1">Street Address 1:</label>
+                                        <input type="text" class="form-control" id="add1"
+                                            placeholder="Street Address 1">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="add2">Street Address 2:</label>
+                                        <input type="text" class="form-control" id="add2"
+                                            placeholder="Street Address 2">
+                                    </div>
+                                   
+                                    <div class="form-group col-sm-12">
+                                        <label>Country:</label>
+                                        <select class="form-control" id="selectcountry">
+                                            <option>Select Country</option>
+                                            <option>Caneda</option>
+                                            <option>Noida</option>
+                                            <option>USA</option>
+                                            <option>India</option>
+                                            <option>Africa</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="mobno">Mobile Number:</label>
+                                        <input type="text" class="form-control" id="mobno" placeholder="Mobile Number">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="altconno">Alternate Contact:</label>
+                                        <input type="text" class="form-control" id="altconno"
+                                            placeholder="Alternate Contact">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="email">Email:</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Email">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="pno">Pin Code:</label>
+                                        <input type="text" class="form-control" id="pno" placeholder="Pin Code">
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label for="city">Town/City:</label>
+                                        <input type="text" class="form-control" id="city" placeholder="Town/City">
+                                    </div>
+                                </div>
+                                <hr>
+                                <h5 class="mb-3">Security</h5>
+                                <div class="row">
+                                    <div class="form-group col-md-12">
+                                        <label for="uname">User Name:</label>
+                                        <input type="text" class="form-control" id="uname" placeholder="User Name">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="pass">Password:</label>
+                                        <input type="password" class="form-control" id="pass" placeholder="Password">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="rpass">Repeat Password:</label>
+                                        <input type="password" class="form-control" id="rpass"
+                                            placeholder="Repeat Password ">
+                                    </div>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input class="mr-2" type="checkbox">Enable Two-Factor-Authentication</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Add New User</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

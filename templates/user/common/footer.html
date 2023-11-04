@@ -1,44 +1,33 @@
-{% load static %}
-<div class="footer">
-    <div class="container">
-          <div class="footer-top">
-            <div class="col-md-4 amet-sed">
-              <h4>Follow Us</h4>
-               <ul class="social">
-                          <li><a  href="#" ><i class="fb"> </i> </a></li>
-                          <li><a  href="#" ><i  class="rss"></i></a></li>
-                          <li><a  href="#" ><i class="twitter"></i></a></li>
-                          <li><a href="#"><i class="dribble"></i></a></li>
-                          <div class="clearfix"></div>
-                      </ul>
-                      <ul class="social-in">
-                          <li><i class="glyphicon glyphicon-home two"> </i>sector 21 , main road </li>
-                          <li><i class="glyphicon glyphicon-earphone"> </i> +71999-56985</li>
-                          <li><a href="mailto:contact@example.com"><i class="glyphicon glyphicon-envelope"> </i> contact@example.com</a></li>
-                          <div class="clearfix"> </div>
-                      </ul>
-              </div>
-              <div class="col-md-4 amet-sed ">
-                 <h4>Twitter Feed</h4>
-                 <p><a href="#">@ Music</a> Lorem ipsum is simply dummy is simply dummy text, text hid Lorem ipsum is simply dummy text.</p>
-                 <p><a href="#">@ Music</a> Lorem ipsum is simply dummy is simply dummy text, text hid Lorem ipsum is simply dummy text.</p>						
-              </div>
-               <div class="col-md-4 amet-sed amet-in">
-                      <h4>Photo Stream</h4>
-                      <ul>
-                          <li><a href="#"><img src="{% static 'user/images/f.jpg'%}" alt="" class="img-responsive"></a></li>
-                          <li><a href="#"><img src="{% static 'user/images/f2.jpg'%}" alt="" class="img-responsive"></a></li>
-                          <li><a href="#"><img src="{% static 'user/images/f3.jpg'%}" alt="" class="img-responsive"></a></li>
-                          <li><a href="#"><img src="{% static 'user/images/f4.jpg'%}" alt="" class="img-responsive"></a></li>
-                          <li><a href="#"><img src="{% static 'user/images/f2.jpg'%}" alt="" class="img-responsive"></a></li>
-                          <li><a href="#"><img src="{% static 'user/images/f3.jpg'%}" alt="" class="img-responsive"></a></li>
-                          <div class="clearfix"> </div>
-                      </ul>
-              </div>
-              <div class="clearfix"> </div>
+<footer class="iq-footer">
+    <div class="container-fluid">
+       <div class="row">
+          <div class="col-sm-12">
+             <div class="player row">
+                <div class="details col-6 col-sm-4 col-md-4 col-lg-4">
+                   <div class="now-playing"></div>
+                   <div class="track-art"></div>
+                   <div>
+                      <div class="track-name">Pop Smoke </div>
+                      <div class="track-artist">Cascada</div>
+                   </div>
+                </div>
+                <div class="slider_container slider_music col-sm-5 col-md-4 col-lg-4">
+                   <div class="current-time">00:00</div>
+                   <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+                   <div class="total-duration">00:00</div>
+                </div>
+                <div class="buttons col-6  col-sm-3 col-md-2  col-lg-2">
+                   <div class="prev-track" onclick="prevTrack()"><i class="fa fa-step-backward fa-2x"></i></div>
+                   <div class="playpause-track" onclick="playpauseTrack()"><i class="fa fa-play-circle fa-3x"></i></div>
+                   <div class="next-track" onclick="nextTrack()"><i class="fa fa-step-forward fa-2x"></i></div>
+                </div>
+                <div class="slider_container sound col-sm-6 col-md-2  col-lg-2">
+                   <i class="fa fa-volume-down"></i>
+                   <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+                   <i class="fa fa-volume-up"></i>
+                </div>
+             </div>
           </div>
-           <div class="copy">
-                      <p>&copy; 2015 My_Albums. All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a> </p>
-              </div>
-          </div>
-      </div>
+       </div>
+    </div>
+ </footer>

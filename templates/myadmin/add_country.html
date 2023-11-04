@@ -1,0 +1,34 @@
+{% extends 'myadmin/common/layout.html' %}
+{% block content %}
+<div id="content-page" class="content-page">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-lg-10">
+                <div class="iq-card">
+                    <div class="iq-card-header d-flex justify-content-between">
+                        <div class="iq-header-title">
+                            <h4 class="card-title">Add Country </h4>
+                        </div>
+                    </div>
+                    <div class="iq-card-body">
+                        <p>Where Use Our Website</p>
+                        <form method="post" action="/myadmin/store_country">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="exampleInputText1">Country </label>
+                                <input type="text" id="country" name="country" class="form-control" id="exampleInputText1"
+                                    placeholder="Enter Country">
+                            </div>
+                           
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn iq-bg-danger">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
