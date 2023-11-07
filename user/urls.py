@@ -21,17 +21,18 @@ from user import views
 urlpatterns = [
     path('index', views.index, name='index'),
     path('layout', views.layout, name='layout'),
-    # # path('contact', views.contact, name='contact'),
+    # path('contact', views.contact, name='contact'),
     # # path('store_contact', views.store_contact, name='store_contact'),
     # path('common_table', views.common_table, name='common_table'),
     path('register', views.register, name='register'),
     path('register_store', views.register_store, name='register_store'),
-    # path('login', views.login, name='login'),
-    # path('login_check', views.login_check, name='login_check'),
+    path('login', views.login, name='login'),
+    path('login_check', views.login_check, name='login_check'),
+    path('add_profile', views.add_profile, name='add_profile'),
     # path('profile', views.profile, name='profile'),
     # path('edit_profile/<int:id>', views.edit_profile, name='edit_profile'),
     # path('update_profile', views.update_profile, name='update_profile'),
-    # # path('logout', views.logout, name='logout'),
+    path('logout', views.logout, name='logout'),
     # # path('logout', views.logout, name='logout'),
     
 ]

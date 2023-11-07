@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
 
-<!-- Mirrored from templates.iqonic.design/muzik/html/sign-up.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Nov 2023 08:17:46 GMT -->
+<!-- Mirrored from templates.iqonic.design/muzik/html/sign-in.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Nov 2023 08:17:45 GMT -->
 
 <head>
     <!-- Required meta tags -->
@@ -22,6 +22,15 @@
 </head>
 
 <body>
+    <center>
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                {% endfor %}
+        </ul>
+        {% endif %}
+    </center>
     <!-- loader Start -->
     <div id="loading">
         <div id="loading-center">
@@ -40,60 +49,50 @@
                             </div>
                         </div> -->
                         <div class="sign-in-page-data">
-                            <div class="sign-in-from w-100 m-auto pt-5">
-                                <h1 class="mb-3 text-center">Sign Up</h1>
-                                <form class="mt-4" method="post" action="/user/register_store" enctype="multipart/form-data">
+                            <div class="sign-in-from w-100 pt-5 m-auto">
+                                <h1 class="mb-3 text-center">Sign in</h1>
+                                <form class="mt-4" action="/user/login_check" method="post">
                                     {% csrf_token %}
 
                                     <div class="form-group">
-                                        <label for="fname">Your Full Name</label>
-                                        <input type="text" class="form-control mb-0" id="fname" name="fname"
-                                            placeholder="Your Full Name">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email">Email address</label>
-                                        <input type="email" class="form-control mb-0" id="email" name="email"
-                                            placeholder="Enter email">
-                                    </div>
-                                    <div class="form-group">
                                         <label for="uname">User Name</label>
                                         <input type="text" class="form-control mb-0" id="uname" name="uname"
-                                            placeholder="Your User Name">
+                                            placeholder="Enter Username">
                                     </div>
                                     <div class="form-group">
-                                        <label for="pic">Profile Pic</label>
-                                        <input type="file" class="form-control mb-0" id="pic" name="pic"
-                                            >
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputPassword2">Password</label>
+                                        <label for="password">Password</label>
                                         <input type="password" class="form-control mb-0" id="password" name="password"
                                             placeholder="Password">
                                     </div>
-
+                                    <div class="sign-info">
+                                        <button type="submit" class="btn btn-primary mb-2">Sign in</button>
+                                        <span class="dark-color d-block line-height-2">Don't have an account? <a
+                                                href="sign-up.html">Sign up</a></span>
+                                    </div>
                                     <div class="d-inline-block w-100">
-                                        <div class="custom-control custom-checkbox d-inline-block mt-2">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck2"
-                                                required>
-                                            <label class="custom-control-label" for="customCheck2">I accept <a
-                                                    href="#">Terms and Conditions</a></label>
+                                        <div class="custom-control custom-checkbox d-inline-block mt-2 pt-1">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">Remember Me</label>
                                         </div>
                                     </div>
-                                    <div class="sign-info mt-3">
-                                        <button type="submit" class="btn btn-primary mb-2">Sign Up</button>
-                                        <span class="d-block line-height-2">Already Have Account ? <a
-                                                href="sign-in.html">Log In</a></span>
-                                    </div>
                                 </form>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <div class="d-flex justify-content-center links">
+                                Don't have an account? <a href="/user/register" class="ml-2">Sign Up</a>
+                            </div>
+                            <div class="d-flex justify-content-center links">
+                                <a href="pages-recoverpw.html">Forgot your password?</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Sign in END -->
+            <!-- color-customizer -->
         </div>
     </section>
-    <!-- Sign in END -->
-    <!-- color-customizer -->
     <div class="iq-colorbox color-fix">
         <div class="buy-button"> <a class="color-full" href="#"><i class="fa fa-spinner fa-spin"></i></a> </div>
         <div class="clearfix color-picker">
@@ -187,6 +186,6 @@
     <script src="{% static 'user/js/custom.js'%}"></script>
 </body>
 
-<!-- Mirrored from templates.iqonic.design/muzik/html/sign-up.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Nov 2023 08:17:46 GMT -->
+<!-- Mirrored from templates.iqonic.design/muzik/html/sign-in.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Nov 2023 08:17:46 GMT -->
 
 </html>
